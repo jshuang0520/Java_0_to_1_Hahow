@@ -9,12 +9,18 @@
 ### Defining a class in Java
 
 // 1. Class Declaration
+
 // 2. Instance Variables --> Creating an instance by a constructor.
+
 // 3. Constructor Declaration of a Class
+
 // 4. Method
 
+
 // 定義型別 <權限修飾子> <型態> <變數>
+
            public int(Primitive) speed
+
            private Dogdoor(Reference) door 
 
 ---
