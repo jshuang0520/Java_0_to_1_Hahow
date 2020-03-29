@@ -5,11 +5,11 @@ public class StringDemo{
 
         /* Way 1  */
         char[] c = {'a', 'b', 'c'}; // 而非 char[] c = {"a", "b", "c"};
-        System.out.println(c);
+        System.out.println(c); // abc
         
         /* Way 2 */
         String str2 = "abc";
-        System.out.println(str2.charAt(0));
+        System.out.println(str2.charAt(0)); // a
 
     }
 }
