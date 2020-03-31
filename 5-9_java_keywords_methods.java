@@ -1,5 +1,5 @@
 /**
-keywords in Java :
+reserved keywords in Java :
     - 存取控制權限的關鍵字, fianl, new, static, import, package
 
 methods in Java :
