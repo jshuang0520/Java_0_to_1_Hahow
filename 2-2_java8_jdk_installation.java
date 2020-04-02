@@ -89,3 +89,23 @@ Developing a Java EE Application
 */
 
 // So I choce Eclipse for my IDE eventually.
+
+
+
+
+
+/**
+
+- google : eclipse black theme
+How to change theme in eclipse - Dark theme
+https://www.youtube.com/watch?v=4n3d09dN-y0
+The Best Dark Theme for Eclipse!
+https://www.youtube.com/watch?v=XdXj0za2diY
+
+- google : eclipse keyword color
+Change color of java keywords in Eclipse editor
+https://stackoverflow.com/questions/10592731/change-color-of-java-keywords-in-eclipse-editor
+
+In Eclipse: Window > Preferences > Java > Editor > Syntax Coloring > "Keyword 'return'" and "Keywords excluding 'return'"
+
+ */
