@@ -10,6 +10,10 @@
 
 --
 
+### [Eclipse Cheat Sheet](https://www.shortcutfoo.com/app/dojos/eclipse-win/cheatsheet)
+
+--
+
 ### Defining a class in Java
 
 // 1. Class Declaration
