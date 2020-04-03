@@ -12,6 +12,18 @@
 
 ### [Eclipse Cheat Sheet](https://www.shortcutfoo.com/app/dojos/eclipse-win/cheatsheet)
 
+
+-- 
+
+### [Selection cannot be launched and there are no recent launches](https://stackoverflow.com/questions/9240333/selection-cannot-be-launched-and-there-are-no-recent-launches-when-eclipse-for)
+
+### [Unable to launch Eclipse](https://www.youtube.com/watch?v=XbIyip3WtNw)
+
+#### Reason:
+> 1. public static void main(String[] args){} --> check if there's spelling mistake
+
+> 2. Run Configurations
+
 --
 
 ### Defining a class in Java
