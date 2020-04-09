@@ -24,6 +24,8 @@
 
 > 2. Run Configurations
 
+![eclipse_run_configuration](https://github.com/jshuang0520/Java_0_to_1_Hahow/eclipse_run_configuration.jpg)
+
 --
 
 ### Defining a class in Java
