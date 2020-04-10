@@ -1,5 +1,9 @@
 ## [Java程式語言從0到1](https://hahow.in/courses/5892e48a5f188a07007f7013/assignments)
 
+## Java8 API Documents
+[Java™ Platform, Standard Edition 8
+API Specification](https://docs.oracle.com/javase/8/docs/api/)
+
 ## Compilers Online
 
 [CodingGround](https://www.tutorialspoint.com/codingground.htm)
