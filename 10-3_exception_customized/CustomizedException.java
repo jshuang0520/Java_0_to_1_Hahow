@@ -11,3 +11,10 @@ public class CustomizedException extends Exception{
         return "test message: " + msg;
     }
 }
+
+/* out:
+
+here's in try
+test message: Error, e04!
+here's in except
+*/
