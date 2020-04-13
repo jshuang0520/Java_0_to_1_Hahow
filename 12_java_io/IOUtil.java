@@ -1,4 +1,9 @@
 import java.io.File;
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 
 //public class IOUtilInterface{
 //
@@ -20,6 +25,9 @@ import java.io.File;
 //    }
 //
 //    public static void writeTextFile(String fileName){
+//        // do something...
+//    }
+//    public static void copyPictureFile(String fileName){
 //        // do something...
 //    }
 //}
@@ -60,10 +68,40 @@ public class IOUtil{
     }
 
     public static void readTextFile(String fileName){
-        // do something...
+        // 1. fileReader
+        FileReader fr = null;
+        try{
+        	fr = new FileReader(fileName);
+        }catch(FileNotFoundException e){
+            // use printStackTrace in catch
+            e.printStackTrace();
+        }
+        // 2. BufferedReader (put FileReader into BufferedReader)
+        BufferedReader br = new BufferedReader(fr);
+        // readLine
+        String line = null;
+        try{
+            while( (line = br.readLine()) != null ){
+                // do something to the data
+                System.out.println(line);
+            }
+        }catch(IOException e){
+            e.printStackTrace();
+        }finally{
+            // close resource
+            try{
+                br.close();
+            }catch(IOException e){
+                e.printStackTrace();
+            }
+        }
     }
 
     public static void writeTextFile(String fileName){
+        // do something...
+    }
+
+    public static void copyPictureFile(String fileName){
         // do something...
     }
 }
