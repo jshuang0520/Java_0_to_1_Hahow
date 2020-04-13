@@ -1,0 +1,7 @@
+This is a file to be read.
+裡面有中文和英文．
+測試看看．
+Because it's 'readLine', 
+    so I'm trying to write multiple lines here.
+    順便在最前方加些空白，
+看他的效果怎麼樣！

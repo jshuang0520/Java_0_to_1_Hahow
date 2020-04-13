@@ -1,8 +1,16 @@
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.List;
+import java.util.ArrayList;
+import java.io.FileWriter;
+import java.io.BufferedWriter;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
 
 
 //public class IOUtilInterface{
@@ -20,14 +28,14 @@ import java.io.IOException;
 //        // do something...
 //    }
 //
-//    public static void readTextFile(String fileName){
+//    public static void readTxtFile(String fileName){
 //        // do something...
 //    }
 //
-//    public static void writeTextFile(String fileName){
+//    public static void writeTxtFile(String fileName){
 //        // do something...
 //    }
-//    public static void copyPictureFile(String fileName){
+//    public static void copyPictureFile(File source, File dest){
 //        // do something...
 //    }
 //}
@@ -67,7 +75,7 @@ public class IOUtil{
         
     }
 
-    public static void readTextFile(String fileName){
+    public static void readTxtFile(String fileName){
         // 1. fileReader
         FileReader fr = null;
         try{
@@ -97,11 +105,65 @@ public class IOUtil{
         }
     }
 
-    public static void writeTextFile(String fileName){
-        // do something...
+    public static void writeTxtFile(String fileName){
+        // data to be written
+        List<String> strArrayList = new ArrayList();
+        strArrayList.add("This is a file to be read."); 
+        strArrayList.add("裡面有中文和英文．"); 
+        strArrayList.add("測試看看．"); 
+        strArrayList.add("Because it's 'readLine', "); 
+        strArrayList.add("    so I'm trying to write multiple lines here."); 
+        strArrayList.add("    順便在最前方加些空白，"); 
+        strArrayList.add("看他的效果怎麼樣！"); 
+        
+        try{
+            // 1. fileWriter
+            FileWriter fw = new FileWriter(fileName);
+            // 2. BufferedWriter
+            BufferedWriter bw = new BufferedWriter(fw);
+            // forEach - write data line by line
+            for(String str: strArrayList){  // --- loop ---
+                bw.write(str);                  // write line
+                bw.newLine();                   // new line
+            }bw.flush();                    // close resource
+        }catch(IOException e){
+            e.printStackTrace();
+        }
     }
 
-    public static void copyPictureFile(String fileName){
-        // do something...
+    public static void copyPictureFile(File source, File dest){
+        // FileInputStream, FileOutputStream
+        FileInputStream fis = null;
+        FileOutputStream fos = null;
+
+        try{
+            // FileInputStream
+            fis = new FileInputStream(source);
+            // FileOutputStream
+            fos = new FileOutputStream(dest);
+            // FileOutputStream - (1) write(byte[] b, int off(起始位置), int len(長度))
+            // buffer 是由 byte陣列 所建
+            byte[] buffer = new byte[1024];
+            // int off(起始位置)
+            int off = 0;
+            // int len(長度)
+            int len = 0;
+            // fis.read() - while read file
+            while( (len = fis.read(buffer)) != -1 ){// while fis.read()
+                // fos.write() - write file             // fos.write()
+                fos.write(buffer, off, len);        
+            }fos.flush();                           // close resource
+
+        }catch(IOException e){
+            e.printStackTrace();
+        }finally{
+            // close resource
+            try{
+                fis.close();
+                fos.close();
+            }catch(IOException e){
+                e.printStackTrace();
+            }
+        }
     }
 }

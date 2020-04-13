@@ -1,6 +1,6 @@
 import java.nio.file.Path;
 import java.nio.file.Paths;
-
+import java.io.File;
 
 public class MainDemo{
 
@@ -47,6 +47,13 @@ public class MainDemo{
         IOUtil.createFolder(fileName2);
         // read txt file
         String fileName3 = (Paths.get(currentPath.toString(), "testFolder2", "to_be_read.txt")).toString();
-        IOUtil.readTextFile(fileName3);
+        IOUtil.readTxtFile(fileName3);
+        // write txt file
+        String fileName4 = (Paths.get(currentPath.toString(), "testFolder2", "write_data.txt")).toString();
+        IOUtil.writeTxtFile(fileName4);
+        // write picture file
+        String source = (Paths.get(currentPath.toString(), "pikachu_hi_pokemon.png")).toString();
+        String dest = (Paths.get(currentPath.toString(), "testFolder2", "pikachu_hi_pokemon.png")).toString();
+        IOUtil.copyPictureFile(new File(source), new File(dest));
     }
 }
