@@ -63,10 +63,11 @@ Ways to generate a thread:
     Steps:
     (1) overwrite run() method
     (2) call thread.start() in main() method of your self-defined class
-    
     Cons:
     (1) This class can't extend other classes (in Java, you can only extend one class)
+
 2. extends interface Runnable - https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html
+    Steps:
     (1) implements Runnable interface & run() method
     (2) put that object into this constructor: Thread(Runnable target)
     (3) call thread.start() in main() method of your self-defined class
