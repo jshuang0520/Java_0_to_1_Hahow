@@ -40,24 +40,25 @@ Setup (for Mac) - Install the latest Cloud Tools version
                         [1] endless-codex-274615
                         [2] Create a new project
                         Please enter numeric choice or text value (must exactly match list
-                        item):  // 我選 2
+                        item):  // I chose 2
 
-                        // Project id(6~30字元): 
+                        // Project id(6~30 characters): 
                         // $ gcloud projects create js-project-2020-04-19T00
 
-                        選1的話:
+                        If I choose 1:
                         Your current project has been set to: [endless-codex-274615]
 
+5. Login SDK
 $ gcloud auth application-default login
-遇到 zsh: command not found: gcloud
+> Error message:    zsh: command not found: gcloud
 https://stackoverflow.com/questions/31037279/gcloud-command-not-found-while-installing-google-cloud-sdk
-$ cd
-$ source ~/.zshrc     ($ source ~/.bashrc)
+    maybe just for the first time:
+    $ cd
+    $ source ~/.zshrc     ($ source ~/.bashrc)
 
 $ gcloud auth application-default login
-
-若看到 You are now authenticated with the Google Cloud SDK!    https://cloud.google.com/sdk/auth_success
-就是成功啦！
+> If you see message "You are now authenticated with the Google Cloud SDK!"    https://cloud.google.com/sdk/auth_success
+Then, you login successfully! Congrads~
 
 
 
