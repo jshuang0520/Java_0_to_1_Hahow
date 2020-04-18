@@ -43,7 +43,9 @@ ThreadB threadB = new ThreadB(user);
 
 
 
-
+multithread - 
+Blocked_event 1. synchronized: the one(thread) who gets the 'lock flag' is unblocked, and is able to be back to RUNNABLE
+Blocked_event 2. wait: after enough waiting (or notified), then it'll have qualification to chase for the 'lock flag'
 
 
 new Thread                                                         Dead
@@ -81,7 +83,7 @@ is unblocked           |                            | synchronized              
                        |                            |                               |
                        |       (LOCKED POOL)        v                               |
 everyone here(lock pool)                                                            |
-need to rush for the "unique" lock flag for that synchronized object,               |
+need to chase for the "unique" lock flag for that synchronized object,              |
 then can go next stage(RUNNING) if thread_scheduler calls                           |
                        <-------- BLOCKED 1 <---------                               |
                     Unblocked          ^      Blocked_event                         |
