@@ -1,12 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+// If you want to write Java code in JSP, use this <% ...write some java code here... %>
+
 <%
 
 /*
@@ -39,6 +32,3 @@ out.println("Hello " + name);
 
 out.println("You can write Java code in JSP as long as using notation <% and its closing tag!\n");
 %>
-
-</body>
-</html>
